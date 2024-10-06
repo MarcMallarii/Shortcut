@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shortcut</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+        <script src="popup.js"></script>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        h5 {
+            font-weight: bold;
+        }
+
+        button {
+            text-align: inherit;
+            border: 0;
+            background-color: #fff;
+            padding: 0 !important;
+            cursor: default !important;
+        }
+
+        .mainContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            overflow: hidden; /* Prevents scrollbars */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 !important;
+            overflow: hidden; /* Prevents scrollbars */
+        }
+
+        .accountCreation,
+        .redmineStatus {
+            width: max-content;
+            padding: 5px;
+            display: flex; /* Added to make this a flex container */
+            flex-direction: column; /* Set direction to column */
+            gap: 10px; /* Adds space between items */
+        }
+
+        .formSection {
+            border-radius: 10px;
+            padding: 5px;
+            background-color: #def3fd;
+            display: flex; /* Added to make this a flex container */
+            flex-direction: column; /* Set direction to column */
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+        }
+    </style>
+
+    <body>
+        <button id="applyButton">
+            <div class="mainContainer">
+                <div class="container">
+                    <div class="accountCreation">
+                        <div class="formSection">
+                            <label><input class="form-check-input" type="radio" name="function" value="addNewAgent" /> Add New Agent</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="general" /> General Info</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="employment" /> Employment</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="preferences" /> User Preferences</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="preferencesLongPassword" /> User Preferences (LP)</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="sites" /> Sites</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="roles" /> Roles</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="permissions" /> User Permission</label>
+                        </div>
+                        <div class="formSection">
+                            <label><input class="form-check-input" type="radio" name="function" value="addNewAgent2" /> Add New Agent 2</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="general2" /> General Info 2</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="preferences2LongPassword" /> User Preferences 2</label>
+                        </div>
+
+                        <div class="formSection">
+                            <label><input class="form-check-input" type="radio" name="function" value="checkAllCheckbox" /> Check All Checkbox</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="highlightActiveElements" /> Highlight Elements</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="loremIpsum" /> Lorem Ipsum</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="myCaseload" /> My Caseload</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="reportFilter" /> Report Filter</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="referenceBugs" /> Reference Bugs</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="numberOfDivs" /> Number of Divs</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="resetStyle" /> Reset Style</label>
+                        </div>
+                        <div class="formSection">
+                            <label><input class="form-check-input" type="radio" name="function" value="interfaceMonitoringCounts" /> Interface Monitoring</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="displayCounts" /> Display Counts</label>
+                        </div>
+                    </div>
+                    <div class="redmineStatus">
+                        <div class="formSection">
+                            <label><input class="form-check-input" type="radio" name="function" value="qaedOkInLiveWithRMTrackdown" /> Qa'ed - Ok in Live</label>
+                            <!-- <label><input class="form-check-input" type="radio" name="function" value="qaedOkInLiveWithoutRMTrackdown" /> QA'ED - OK IN LIVE + RTL</label> -->
+                            <label><input class="form-check-input" type="radio" name="function" value="redmineTrackdown" /> Redmine Trackdown</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="qa" /> QA</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="testing" /> Testing</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="approved" /> Approved</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="reopened" /> Reopened</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="resolved" /> Resolved</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="resolvedNotAnIssue" /> Resolved-Not an Issue</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="qaedInStaging" /> Qa'ed in Staging</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="onHoldRequiresRTZFeedback" /> On hold - Requires RTZ Feedback</label>
+                        </div>
+                        <div class="formSection">
+                            <label><input class="form-check-input" type="radio" name="function" value="addinTV" /> Add in Target Version</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="updateTV" /> Update Target Version</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="logtime" /> Logging Out</label>
+                        </div>
+                        <div class="formSection">
+                          <label><input class="form-check-input" type="radio" name="function" value="removeStatus" /> Remove Status</label>
+                          <label><input class="form-check-input" type="radio" name="function" value="forCtools" /> For Centralized</label>
+                          <label><input class="form-check-input" type="radio" name="function" value="supportBug" /> Support Bug</label>
+                      </div>
+
+                        <div class="formSection">
+                            <label><input class="form-check-input" type="radio" name="function" value="michigan" /> MI</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="california" /> CA</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="washington" /> WA</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="oklahoma" /> OK</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="losangeles" /> LA</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="florida" /> FL</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="indiana" /> IN</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="kentucky" /> KY</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="missouri" /> MO</label>
+                            <label><input class="form-check-input" type="radio" name="function" value="pennsylvania" /> PA</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </button>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    </body>
+</html>
